@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101425">
+    <title>Packman — Maze Muncher</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">ARCADE CLASSIC</p>
+          <h1>PACK<span>MAN</span></h1>
+        </div>
+        <button id="restart" class="restart-button" type="button">↻ <span>New game</span></button>
+      </header>
+
+      <section class="game-card" aria-label="Packman game">
+        <div class="score-bar" aria-live="polite">
+          <div class="score-item"><span class="score-label">SCORE</span><strong id="score">00000</strong></div>
+          <div class="score-item"><span class="score-label">DOTS</span><strong id="dots">000</strong></div>
+          <div class="score-item lives-item"><span class="score-label">LIVES</span><strong id="lives">● ● ●</strong></div>
+        </div>
+        <div class="board-wrap">
+          <canvas id="game" width="608" height="608" aria-label="Maze game board. Use arrow keys or WASD to move."></canvas>
+          <div id="end-screen" class="end-screen" hidden>
+            <p class="end-kicker">MAZE MUNCHER</p>
+            <h2 id="end-title">Nice work!</h2>
+            <p id="end-message">You cleared the maze.</p>
+            <button id="play-again" class="play-button" type="button">Play again</button>
+          </div>
+        </div>
+        <div class="game-footer">
+          <p id="game-status" role="status">Clear the maze. Watch out for the ghosts!</p>
+          <div class="power-key"><span class="power-dot"></span> POWER PELLET</div>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <p><span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span>
+          <span class="or">or</span> WASD <span class="control-hint">to move</span></p>
+        <p class="desktop-hint">Eat every dot to win</p>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
